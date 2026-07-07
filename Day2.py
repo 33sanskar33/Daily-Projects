@@ -13,8 +13,7 @@ if(choice == 1):
     print("Balance is: ", balance)
 elif(choice == 2):
     deposit = int(input("Enter amount to deposit: "))
-    valid = 100
-    if(deposit > valid):
+    if(deposit > 0):
         balance += deposit
         print("₹", deposit, "Deposit Sucessfully")
         print("Current Balance:", balance)
@@ -22,7 +21,7 @@ elif(choice == 2):
         print("Invalid Choiec")
 elif(choice == 3):
     withdraw = int(input("Enter amount to withdraw: "))
-    if(balance > withdraw):
+    if(balance >= withdraw):
         balance -= withdraw
         print("Current balance is : ", balance)
     else:
